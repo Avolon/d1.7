@@ -1,0 +1,14 @@
+#cloud-config
+users:
+ # - default
+  - name: avolon
+    gecos: Custom user
+    primary_group: avolon
+    groups: sudo
+    shell: /bin/bash
+    sudo: 'ALL=(ALL) NOPASSWD:ALL'
+#    lock_passwd: false
+#    disable_root: true
+  # passwd: Olya43$#
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP99P3r6ihfFX/J8TrZqwoR+ZmBo4larumFvL8yWUNpa avolon@botserver
